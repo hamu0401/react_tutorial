@@ -26,8 +26,8 @@ export default class App extends React.Component {
       history: history.concat([
         {
           squares: squares,
-          col: (1 % 3) + 1,
-          row: Math.floor(i / 3) +1,
+          col: (i % 3) + 1,//i % 3の余剰に1を足す
+          row: Math.floor(i / 3) +1,//i / 3でfloorで整数にして1を足す
         }
       ]),
       stepNumber: history.length,
